@@ -1,0 +1,25 @@
+GT DESIGN — ÁREA DO CLIENTE
+
+Esta é uma primeira versão pública e responsiva para celular e computador.
+- Apresenta categorias de serviços.
+- Permite preencher uma solicitação/orçamento.
+- Abre o WhatsApp com uma mensagem para o cliente revisar e enviar.
+
+IMPORTANTE
+Esta versão ainda não é uma loja completa ligada ao painel administrativo ou ao Supabase. Os pedidos não ficam automaticamente salvos no banco de dados; são enviados pelo WhatsApp quando o cliente toca em Enviar. Pagamentos online ficam para uma etapa posterior.
+Não solicite senhas, dados bancários ou informações sensíveis.
+
+CONFIGURAR WHATSAPP
+Abra app.js e confira:
+const WHATSAPP_NUMBER = "5575988532747";
+Use DDI + DDD + número, somente dígitos.
+
+PUBLICAR
+1. Crie um repositório separado no GitHub, por exemplo GT-Design-Clientes.
+2. Envie index.html, styles.css, app.js e LEIA-ME.txt para a raiz.
+3. No Cloudflare Pages, crie um projeto conectado a esse repositório.
+4. Como é um site estático, use a raiz (/) como diretório de saída e deixe o comando de build vazio.
+5. Teste o formulário e o WhatsApp antes de divulgar.
+
+PRÓXIMA ETAPA
+Para registrar pedidos no mesmo Supabase do painel administrativo, primeiro configure políticas de acesso específicas para clientes. No navegador use somente a chave publicável e políticas RLS corretas; nunca coloque a chave sb_secret_ no frontend.
